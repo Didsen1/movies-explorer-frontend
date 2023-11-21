@@ -1,0 +1,129 @@
+.techs {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-gray-color);
+    padding: 100px 70px;
+    color: var(--white);
+}
+
+.techs__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.techs-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 460px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+
+.techs-title-wrapper__title {
+    font-size: 50px;
+    line-height: 58px;
+    letter-spacing: -2px;
+    margin: 0;
+    margin-top: 90px;
+}
+
+.techs-title-wrapper__subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.56px;
+    margin: 0;
+    margin-top: 26px;
+}
+
+.techs-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    margin-top: 100px;
+    padding: 0;
+}
+
+.techs-list__tech {
+    margin: 0;
+    border: solid 0px;
+    border-radius: 10px;
+    width: 90px;
+    padding: 21px 0 22px;
+    background: #303030;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.56px;
+}
+
+.techs-list__tech:not(:last-child) {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 990px) {
+    .techs {
+        padding: 90px 50px;
+    }
+
+    .techs-title-wrapper__title {
+        margin-top: 80px;
+    }
+
+    .techs-title-wrapper__subtitle {
+        margin-top: 22px;
+    }
+
+    .techs-list {
+        margin-top: 83px;
+    }
+
+    .techs-list__tech {
+        box-sizing: border-box;
+        width: 84px;
+        height: 57px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .techs {
+        padding: 60px 14px 70px;
+    }
+
+    .techs-title-wrapper {
+        width: 292px;
+    }
+
+    .techs-title-wrapper__title {
+        margin-top: 60px;
+        font-size: 30px;
+        line-height: normal;
+        letter-spacing: -1.2px;
+    }
+
+    .techs-title-wrapper__subtitle {
+        font-size: 11px;
+        letter-spacing: -0.44px;
+        line-height: 16px;
+        margin-top: 24px;
+    }
+
+    .techs-list {
+        display: grid;
+        grid-template-columns: repeat(2, 84px);
+        gap: 10px;
+        margin-top: 50px;
+    }
+
+    .techs-list__tech:not(:last-child) {
+        margin-right: 0;
+    }
+    
+
+}

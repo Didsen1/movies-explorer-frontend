@@ -1,0 +1,125 @@
+.search-box {
+    padding: 60px 70px 0;
+    box-sizing: border-box;
+}
+
+.search-box-input {
+    display: flex;
+    flex-direction: row;
+    border-radius: 40px;
+    height: 46px;
+    position: relative;
+}
+
+.search-box-input__text {
+    background: var(--dark-gray-color);
+    border: 0px solid;
+    border-radius: 40px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 22px;
+    color: var(--gray);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px
+}
+
+.search-box-input__submit {
+    cursor: pointer;
+    background-image: url("../../images/find.svg");
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 34px;
+    border: 0px solid;
+    border-radius: 50px;
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    padding: 0;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: #424242 1px solid;
+    padding-bottom: 70px;
+}
+
+.checkbox {
+    position: relative;
+    display: inline-flex;
+    margin-top: 41px;
+    color: var(--white);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.checkbox__input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.checkbox__slider {
+    width: 36px;
+    height: 20px;
+    display: inline-flex;
+    background-color: #343434;
+    transition: .4s;
+    margin-right: 12px;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.checkbox__slider::before {
+    content: "";
+    height: 16px;
+    width: 16px;
+    margin-left: 2px;
+    background-color: #A0A0A0;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.checkbox__input:checked+.checkbox__slider {
+    background-color: var(--green);
+}
+
+.checkbox__input:checked+.checkbox__slider:before {
+    transform: translateX(16px);
+    background: var(--white);
+}
+
+@media screen and (max-width: 990px) {
+    .search-box {
+        padding: 80px 30px 0;
+    }
+
+    .checkbox-wrapper {
+        padding-bottom: 50px;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+    .search-box {
+        padding: 80px 14px 0;
+    }
+
+    .search-box-input__text {
+        font-size: 11px;
+        padding: 14px 19px;
+    }
+
+    .checkbox {
+        font-size: 11px;
+    }
+
+}
