@@ -19,7 +19,7 @@ function Header({ isLoading, onHamburgerClick }) {
                         <Navigation />
                         <div className="header__end-content">
                             <AccountLink />
-                            <button className="header__hamburger hover-button" onClick={onHamburgerClick}></button>
+                            <button className="header__hamburger hover-button" onClick={onHamburgerClick} type="button"></button>
                         </div>
                     </>
 
@@ -27,10 +27,10 @@ function Header({ isLoading, onHamburgerClick }) {
                     <>
                         <a href="/" rel="noreferrer"><img src={logo} className="header__img hover-link" alt='Логотип' /></a>
                         <div className="header__end-content">
-                            <div className="header-button-container">
-                                <a href="/sigup" className="header-button__signup hover-link" rel="noreferrer">Регистрация</a>
-                                <a href="/sigin" className="header-button__signin hover-link" rel="noreferrer">Войти</a>
-                            </div>
+                            <nav className="header__button-container">
+                                <a href="/signup" className="header__button-signup hover-link" rel="noreferrer">Регистрация</a>
+                                <a href="/signin" className="header__button-signin hover-link" rel="noreferrer">Войти</a>
+                            </nav>
                         </div>
                     </>
                 )

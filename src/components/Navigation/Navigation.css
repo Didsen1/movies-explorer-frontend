@@ -1,10 +1,10 @@
-.navigation__movie-link-container {
+.navigation {
     display: flex;
     align-items: center;
     margin-left: 45px;
 }
 
-.navigation__movie-link-container_sidemenu {
+.navigation_sidemenu {
     flex-direction: column;
     margin-left: 0px;
 }
@@ -38,11 +38,21 @@
 }
 
 @media screen and (max-width: 990px) {
-    .navigation__movie-link-container {
+    .navigation {
         display: none;
     }
 
-    .navigation__movie-link-container_sidemenu {
+    .navigation_sidemenu {
         display: flex;
     }
+}
+
+
+@media screen and (max-width: 620px) {
+
+    .navigation__movie-link_sidemenu {
+        margin-top: 25px;
+    }
+
+
 }

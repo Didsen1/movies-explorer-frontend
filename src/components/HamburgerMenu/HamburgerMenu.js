@@ -31,7 +31,7 @@ function HamburgerMenu({ isSideMenuOpen, onClose }) {
     return (
         <div className={`hamburger ${isSideMenuOpen ? "hamburger_active" : " "}`} onMouseDown={closeByClickOnOverlay}>
             <nav className={`hamburger-menu ${isSideMenuOpen ? "hamburger-menu_active" : " "}`}>
-            <button className="hamburger-menu__close-button hover-button" onClick={onClose}></button>
+            <button className="hamburger-menu__close-button hover-button" onClick={onClose} type="button"></button>
             <a href="/" className={`hamburger-menu__main-link hover-link ${isSideMenuOpen && location.pathname === "/" ? "hamburger-menu__main-link_active" : " "} `}>Главная</a>
             <Navigation isSideMenuOpen={isSideMenuOpen} />
             <AccountLink isSideMenuOpen={isSideMenuOpen} />

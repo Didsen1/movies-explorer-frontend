@@ -10,17 +10,18 @@
 
 .aboutprojet-description {
     display: flex;
-    margin-top: 70px;
+    margin-top: 72px;
 }
 
 .aboutprojet-description__article:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 53px;
 }
 
 .aboutprojet-description__title {
     margin: 0;
     font-size: 20px;
     letter-spacing: -0.8px;
+    font-weight: 400;
 }
 
 .aboutprojet-description__subtitle {
@@ -85,7 +86,7 @@
     }
 
     .aboutprojet-description__article:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 39px;
     }
 
     .aboutprojet-description__subtitle {
@@ -102,22 +103,26 @@
         width: 79%;
     }
 
+    .aboutprojet-description {
+        margin-top: 69px;
+    }
+
 
 }
 
 @media screen and (max-width: 620px) {
     .aboutprojet {
-        padding: 70px 18px;
+        padding: 67px 18px 70px;
     }
 
     .aboutprojet-description {
-        margin-top: 60px;
+        margin-top: 63px;
         flex-direction: column;
     }
 
     .aboutprojet-description__article:not(:last-child) {
         margin-right: 0;
-        margin-bottom: 56px;
+        margin-bottom: 57px;
     }
 
     .aboutprojet-description__title {
@@ -132,7 +137,7 @@
     }
 
     .aboutprojet-timeline {
-        margin-top: 60px;
+        margin-top: 62px;
         font-size: 11px;
     }
 

@@ -1,17 +1,20 @@
 .search-box {
-    padding: 60px 70px 0;
+    padding: 60px 70px 70px;
     box-sizing: border-box;
+    border-bottom: var(--linkcontainer-color) 1px solid;
 }
 
-.search-box-input {
+.search-box__form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.search-box__label {
     border-radius: 40px;
-    height: 46px;
     position: relative;
 }
 
-.search-box-input__text {
+.search-box__input-text {
     background: var(--dark-gray-color);
     border: 0px solid;
     border-radius: 40px;
@@ -26,7 +29,7 @@
     line-height: 17px
 }
 
-.search-box-input__submit {
+.search-box__input-submit {
     cursor: pointer;
     background-image: url("../../images/find.svg");
     background-repeat: no-repeat;
@@ -40,26 +43,20 @@
     padding: 0;
 }
 
-.checkbox-wrapper {
+.search-box__checkbox {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-bottom: #424242 1px solid;
-    padding-bottom: 70px;
-}
-
-.checkbox {
+    margin-top:  41px;;
     position: relative;
-    display: inline-flex;
     margin-top: 41px;
     color: var(--white);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
+    align-self: center;
 }
 
-.checkbox__input {
+.search-box__input {
     position: absolute;
     opacity: 0;
     width: 100%;
@@ -67,7 +64,7 @@
     cursor: pointer;
 }
 
-.checkbox__slider {
+.search-box__slider {
     width: 36px;
     height: 20px;
     display: inline-flex;
@@ -78,7 +75,7 @@
     border-radius: 34px;
 }
 
-.checkbox__slider::before {
+.search-box__slider::before {
     content: "";
     height: 16px;
     width: 16px;
@@ -88,37 +85,33 @@
     border-radius: 50%;
 }
 
-.checkbox__input:checked+.checkbox__slider {
+.search-box__input:checked+.search-box__slider {
     background-color: var(--green);
 }
 
-.checkbox__input:checked+.checkbox__slider:before {
+.search-box__input:checked+.search-box__slider:before {
     transform: translateX(16px);
     background: var(--white);
 }
 
 @media screen and (max-width: 990px) {
     .search-box {
-        padding: 80px 30px 0;
-    }
-
-    .checkbox-wrapper {
-        padding-bottom: 50px;
+        padding: 77px 30px 50px;
     }
 
 }
 
 @media screen and (max-width: 620px) {
     .search-box {
-        padding: 80px 14px 0;
+        padding: 77px 14px 50px;
     }
 
-    .search-box-input__text {
+    .search-box__input-text {
         font-size: 11px;
         padding: 14px 19px;
     }
 
-    .checkbox {
+    .search-box__checkbox {
         font-size: 11px;
     }
 

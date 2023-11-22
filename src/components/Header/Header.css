@@ -17,11 +17,13 @@
 }
 
 .header__img {
+    display: block;
+    box-sizing: border-box;
     width: 38px;
     height: 38px;
 }
 
-.header-button-container {
+.header__button-container {
     display: flex;
     font-size: 12px;
     font-weight: 500;
@@ -29,14 +31,14 @@
     align-items: center;
 }
 
-.header-button__signup {
+.header__button-signup {
     display: block;
     color: var(--white);
     text-decoration: none;
     margin-right: 30px;
 }
 
-.header-button__signin {
+.header__button-signin {
     text-decoration: none;
     display: block;
     color: var(--black);
@@ -65,7 +67,13 @@
     }
 
     .header__hamburger {
+        margin-top: -2px;
+        margin-right: 2px;
         display: block;
+    }
+
+    .header__img {
+        margin-top: -2px;
     }
 
 }
@@ -75,17 +83,17 @@
         padding: 18px 14px;
     }
 
-    .header-button-container {
+
+    .header__button-container {
         font-size: 10px;
     }
 
-    .header-button__signup {
+    .header__button-signup {
         margin-right: 14px;
     }
 
-    .header-button__signin {
+    .header__button-signin {
         padding: 5px 12px;
         border-radius: 3px;
     }
-
 }

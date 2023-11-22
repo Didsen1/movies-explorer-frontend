@@ -41,6 +41,7 @@
 
     .account-link-wrapper_sidemenu {
         display: flex;
+        margin-left: 7px;
     }
 
 }

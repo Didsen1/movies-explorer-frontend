@@ -16,14 +16,14 @@ function AboutProject() {
                 </article>
             </div>
             <div className="aboutprojet-timeline">
-                <article className="aboutprojet-timeline__backend aboutprojet-timeline__article-position">
+                <div className="aboutprojet-timeline__backend aboutprojet-timeline__article-position">
                     <p className="aboutprojet-timeline__stage aboutprojet-timeline__stage_backend">1 неделя</p>
                     <p className="aboutprojet-timeline__subtitle">Back-end</p>
-                </article>
-                <article className="aboutprojet-timeline__frontend aboutprojet-timeline__article-position">
+                </div>
+                <div className="aboutprojet-timeline__frontend aboutprojet-timeline__article-position">
                     <p className="aboutprojet-timeline__stage aboutprojet-timeline__stage_frontend">4 недели</p>
                     <p className="aboutprojet-timeline__subtitle">Front-end</p>
-                </article>
+                </div>
             </div>
         </section>
     );

@@ -1,8 +1,9 @@
+
 import "./Portfolio.css"
 
 function Portfolio() {
     return (
-        <div>
+        <article className="portfolio">
             <h2 className="portfolio__title">Портфолио</h2>
             <ul className="portfolio__linklist">
                 <li className="portfolio__linkcontainer">
@@ -24,8 +25,9 @@ function Portfolio() {
                     </a>
                 </li>
             </ul>
-        </div>
+        </article>
     );
 }
 
 export default Portfolio;
+

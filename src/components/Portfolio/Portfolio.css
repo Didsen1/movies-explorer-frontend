@@ -61,21 +61,23 @@
         font-size: 14px;
     }
 
+    .portfolio__linkcontainer {
+        padding-bottom: 19px;
+    }
+
     .portfolio__linklist {
-        margin-top: 40px;
+        margin-top: 41px;
     }
-
-    .portfolio__link {
-        letter-spacing: -0.72px;
-    }
-
+    
     .portfolio__text {
         font-size: 18px;
         line-height: 28px;
+        letter-spacing: -0.72px;
     }
 
     .portfolio__symbol {
         font-size: 18px;
         line-height: 28px;
+        letter-spacing: -0.72px;
     }
 }

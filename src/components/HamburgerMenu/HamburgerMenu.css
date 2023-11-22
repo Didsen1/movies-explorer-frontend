@@ -53,10 +53,12 @@
     width: 22px;
     height: 22px;
     align-self: flex-end;
+    margin-top: 4px;
+    margin-right: 4px;
 }
 
 .hamburger-menu__main-link {
-    margin-top: 105px;
+    margin-top: 111px;
     color: var(--white);
     text-decoration: none;
     text-align: center;
@@ -71,11 +73,16 @@
 
     .hamburger-menu {
         width: 100%;
-        padding: 33px 10px 46px;
+        padding: 14px 10px 183px;
     }
 
     .hamburger-menu__main-link {
-        margin-top: 100px;
+        margin-top: 104px;
+    }
+
+    .hamburger-menu__close-button {
+        margin-top: 4px;
+        margin-right: 8px;
     }
 
 

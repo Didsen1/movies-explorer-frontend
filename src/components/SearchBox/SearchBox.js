@@ -2,19 +2,19 @@ import "./SearchBox.css"
 
 function SearchBox() {
     return (
-        <section className="search-box">
-            <form className="search-box-input">
-                <input type="text" className="search-box-input__text" placeholder="Фильм"></input>
-                <button type="submit" className="search-box-input__submit hover-button" ></button>
-            </form>
-            <div className="checkbox-wrapper">
-                <label className="checkbox">
-                    <input type="checkbox" className="checkbox__input" />
-                    <span className="checkbox__slider"></span>
+        <div className="search-box">
+            <form className="search-box__form">
+                <div className="search-box__label">
+                    <input type="search" className="search-box__input-text" placeholder="Фильм" required></input>
+                    <button type="submit" className="search-box__input-submit hover-button" ></button>
+                </div>
+                <div className="search-box__checkbox hover-button">
+                    <input className="search-box__input" type="checkbox" />
+                    <span className="search-box__slider"></span>
                     Короткометражки
-                </label>
-            </div>
-        </section>
+                </div>
+            </form>
+        </div>
     );
 }
 

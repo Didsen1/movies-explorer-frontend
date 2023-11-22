@@ -5,7 +5,7 @@ import SearchBox from "../SearchBox/SearchBox";
 import MovieCardsList from "../MovieCardsList/MovieCardsList"
 import Footer from "../Footer/Footer";
 
-function Movie({ isLoading, onHamburgerClick, cards }) {
+function Movie({ isLoading, onHamburgerClick, cards, isLiked, onCardLike }) {
 
     return (
         <>
@@ -13,7 +13,7 @@ function Movie({ isLoading, onHamburgerClick, cards }) {
             <main className="movie">
                 <SearchBox />
                 <MovieCardsList
-                    cards={cards} />
+                    cards={cards} isLiked={isLiked} onCardLike={onCardLike} />
             </main>
             <Footer />
         </>

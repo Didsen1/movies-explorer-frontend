@@ -1,0 +1,41 @@
+[
+    {
+        "country": "United States",
+        "director": "Christopher Nolan",
+        "duration": 150,
+        "year": 2021,
+        "description": "Inception is a mind-bending sci-fi thriller...",
+        "image": "https://sun9-45.userapi.com/impg/2_O2_MtKpC378mXtgXmdowUZhLHZXeU4eiNUtQ/Pk6VF-Gligk.jpg?size=1080x566&quality=96&sign=9b736e0ff2dc4c578c78257f889e8425&type=album",
+        "trailerLink": "https://example.com/inception-trailer",
+        "thumbnail": "https://example.com/inception-thumbnail.jpg",
+        "nameRU": "Начало",
+        "nameEN": "Inception",
+        "movieId": "1234567890"
+    },
+    {
+        "country": "Russia",
+        "director": "Andrei Tarkovsky",
+        "duration": 183,
+        "year": 1979,
+        "description": "Stalker is a philosophical science fiction film...",
+        "image": "https://sun9-45.userapi.com/impg/2_O2_MtKpC378mXtgXmdowUZhLHZXeU4eiNUtQ/Pk6VF-Gligk.jpg?size=1080x566&quality=96&sign=9b736e0ff2dc4c578c78257f889e8425&type=album",
+        "trailerLink": "https://example.com/stalker-trailer",
+        "thumbnail": "https://example.com/stalker-thumbnail.jpg",
+        "nameRU": "Сталкер",
+        "nameEN": "Stalker",
+        "movieId": "9876543210"
+    },
+    {
+        "country": "USA",
+        "director": "Christopher Nolan",
+        "duration": 152,
+        "year": 2010,
+        "description": "Inception is a mind-bending science fiction...",
+        "image": "https://sun9-45.userapi.com/impg/2_O2_MtKpC378mXtgXmdowUZhLHZXeU4eiNUtQ/Pk6VF-Gligk.jpg?size=1080x566&quality=96&sign=9b736e0ff2dc4c578c78257f889e8425&type=album",
+        "trailerLink": "https://example.com/inception-trailer",
+        "thumbnail": "https://example.com/inception-thumbnail.jpg",
+        "nameRU": "Начало",
+        "nameEN": "Inception",
+        "movieId": "1"
+    }
+]

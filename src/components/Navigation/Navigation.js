@@ -5,7 +5,7 @@ function Navigation({ isSideMenuOpen }) {
     let location = useLocation();
     return (
         <>
-            <nav className={`navigation__movie-link-container ${isSideMenuOpen ? "navigation__movie-link-container_sidemenu" : " "}`}>
+            <nav className={`navigation ${isSideMenuOpen ? "navigation_sidemenu" : " "}`}>
                 <a href="/movies" className={`navigation__movie-link hover-link ${isSideMenuOpen ? "navigation__movie-link_sidemenu" : " "} 
                 ${isSideMenuOpen && location.pathname === "/movies" ? "navigation__movie-link_active" : " "}
                 `} rel="noreferrer">Фильмы</a>
@@ -14,7 +14,7 @@ function Navigation({ isSideMenuOpen }) {
                 `} rel="noreferrer">Сохранённые фильмы</a>
             </nav>
         </>
-    );
+    ); 
 }
 
 export default Navigation;
