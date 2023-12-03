@@ -1,7 +1,7 @@
 .search-box {
-    padding: 60px 70px 70px;
     box-sizing: border-box;
     border-bottom: var(--linkcontainer-color) 1px solid;
+    padding: 60px 0 70px;
 }
 
 .search-box__form {
@@ -96,14 +96,14 @@
 
 @media screen and (max-width: 990px) {
     .search-box {
-        padding: 77px 30px 50px;
+        padding: 77px 0 50px;
     }
 
 }
 
 @media screen and (max-width: 620px) {
     .search-box {
-        padding: 77px 14px 50px;
+        padding: 77px 0 50px;
     }
 
     .search-box__input-text {

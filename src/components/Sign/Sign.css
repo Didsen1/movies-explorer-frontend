@@ -84,6 +84,11 @@
     font-weight: 500;
 }
 
+.sign__button_disabled {
+    color: #C2C2C2;
+    background: var(--white);
+}
+
 .sign__text {
     margin-top: 16px;
     color: var(--gray);
