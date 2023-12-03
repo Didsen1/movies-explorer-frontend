@@ -38,6 +38,9 @@
 }
 
 .movie-card__function-button {
+    background-image: url(../../images/save4d.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     cursor: pointer;
     width: 30px;
     height: 30px;
@@ -46,15 +49,8 @@
     background-color: var(--card-color);
 }
 
-.movie-card__button-img {
-    width: 30px;
-    height: 30px;
-    fill: none;
-}
-
-
-.movie-card__button-img_true path{
-    fill: var(--red);
+.movie-card__function-button_true {
+    background-image: url(../../images/save4.svg);
 }
 
 .movie-card__function-button_delete {

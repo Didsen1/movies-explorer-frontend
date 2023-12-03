@@ -9,10 +9,10 @@ function AboutMe() {
             <SectionTitle title={'Студент'} />
             <article className="aboutme-wrapper">
                 <div className="aboutme-wrapper__container">
-                    <h3 className="aboutme-wrapper__title">Виталий</h3>
+                    <h3 className="aboutme-wrapper__title">Артём</h3>
                     <p className="aboutme-wrapper__subtitle">Фронтенд-разработчик, 30 лет</p>
-                    <p className="aboutme-wrapper__description">Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена и дочь. Я люблю слушать музыку, а ещё увлекаюсь бегом. Недавно начал кодить.
-                        С 2015 года работал в компании «СКБ Контур». После того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами и ушёл с постоянной работы.</p>
+                    <p className="aboutme-wrapper__description">Я родился и живу в Санкт-Перербург. Закончил местный Радиотехнический Колледж по специальности компьютерные сети. Люблю компьютерные игры. Еще во время учебы увлекся кодингом.
+                        С Августа 2022 года, понял, что хочу сделать увлечение основной работой</p>
                     <a className="aboutme-wrapper__gitlink hover-button" href="https://github.com/Didsen1" target="_blank" rel="noreferrer">Github</a>
                 </div>
                 <img className="aboutme-wrapper__image" src={photoAuthor} alt="Фото автора работы" />

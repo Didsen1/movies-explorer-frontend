@@ -22,6 +22,8 @@
 ### Ссылки
 
 - [Ссылка на репозиторий проекта](https://github.com/Didsen1/movies-explorer-frontend/pull/1)
+- [Ссылка на страницу проекта](https://didsen1.movies.nomoredomainsmonster.ru/)
+- [Ссылка на API сервер проекта](api.didsen1.movies.nomoredomainsmonster.ru)
 
 ### Используемые технологии
 

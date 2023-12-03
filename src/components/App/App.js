@@ -163,7 +163,7 @@ function App() {
         nameEN: movie.nameEN,
       })
       if (moviesData) {
-        setSavedCards([moviesData, ...savedCards]);
+        setSavedCards([moviesData.data, ...savedCards]);
       }
     } catch (err) {
       console.error(err);

@@ -19,12 +19,6 @@ export function searchMovies(movies, searchQuery, isSavedMovies) {
     return result;
 }
 
-export function handleSavedStatus(savedCards, movieCard) {
-    return savedCards.find((card) => {
-        return card.movieId === (movieCard.id || movieCard.movieId);
-    });
-}
-
 export function handleMovieFiltering(movies, isFilterOn, isSavedMovies) {
     if (!isSavedMovies) {
         localStorage.setItem("isMoviesFilterOn", isFilterOn);

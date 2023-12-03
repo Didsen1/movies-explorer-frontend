@@ -4,7 +4,6 @@ import MovieCards from "../MoviesCard/MovieCards";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Preloader from "../Preloader/Preloader";
-import {handleSavedStatus} from "../../utils/Utils"
 
 function MovieCardsList({ cards, savedCards, cardsRenderParams, isCardsNotFound, onCardSave, onCardDelete, isLoading }) {
 
@@ -36,6 +35,10 @@ function MovieCardsList({ cards, savedCards, cardsRenderParams, isCardsNotFound,
         }
     }
 
+    const handleSavedStatus = (id) => { 
+        return savedCards?.find((card) => card.movieId === id);
+    }
+
     return (
         <section className="movie-cards-list">
             {!localStorage.getItem("searchQuery") && cards.length === 0 && null}
@@ -50,7 +53,7 @@ function MovieCardsList({ cards, savedCards, cardsRenderParams, isCardsNotFound,
                             <MovieCards
                                 card={card}
                                 key={card.id || card._id}
-                                isSaved={handleSavedStatus(savedCards, card)}
+                                isSaved={handleSavedStatus(card.id)}
                                 onCardSave={onCardSave}
                                 onCardDelete={onCardDelete} />
                         ))}
