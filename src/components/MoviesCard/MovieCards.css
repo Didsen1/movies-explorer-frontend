@@ -45,7 +45,7 @@
     width: 30px;
     height: 30px;
     border: none;
-    opacity: 0.;
+    opacity: 1;
     background-color: var(--card-color);
 }
 
@@ -65,8 +65,7 @@
     background-image: url(../../images/delete-button.svg);
 }
 
-
-.movie-card:hover .movie-card__function-button_delete {
+.movie-card:hover.movie-card__function-button_delete {
     opacity: 1;
 }
 
