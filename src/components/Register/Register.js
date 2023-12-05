@@ -1,5 +1,6 @@
 import Sign from "../Sign/Sign"
 import useFormValidator from "../../hooks/useFormValidator";
+import { USER_NAME_REG_EXP } from '../../utils/constants.js'
 
 function Register({ onSubmit }) {
     const { values, errors, isFormValid, handleChange, } = useFormValidator()
@@ -23,7 +24,7 @@ function Register({ onSubmit }) {
                     <>
                         <label className="sign__label">
                             <span className="sign__label-span">Имя</span>
-                            <input className="sign__input" required type="text" name="name" value={values.name} onChange={handleChange} minLength="2" maxLength="30"></input>
+                            <input className="sign__input" required type="text" name="name" value={values.name} onChange={handleChange} minLength="2" maxLength="30" pattern={USER_NAME_REG_EXP}></input>
                             <span className="sign__error">{errors.name}</span>
                         </label>
                         <label className="sign__label">
