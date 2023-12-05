@@ -18,7 +18,7 @@ export default function useFormValidator() {
             target.setCustomValidity(message);
         };
 
-        if (name === 'name' && target.validity.patternMismatch) {
+        if (name === "name" && target.validity.patternMismatch) {
             setCustomValidity(NAME_VALIDATION);
         } else if (name === 'email' && !isEmail(value)) {
             setCustomValidity(EMAIL_VALIDATION);

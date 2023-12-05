@@ -9,6 +9,7 @@ import { searchMovies, handleMovieFiltering } from "../../utils/Utils"
 function SavedMovie({ isLoggedIn, onHamburgerClick, savedCards, onCardDelete, isLoading }) {
 
     const [cardsForRender, setCardsForRender] = useState([]);
+
     const [filteredCards, setFilteredCards] = useState([]);
     const [isFilterOn, setFilter] = useState(false);
     const [isCardsNotFound, setCardsNotFound] = useState(false);
@@ -26,7 +27,7 @@ function SavedMovie({ isLoggedIn, onHamburgerClick, savedCards, onCardDelete, is
                     setIsSearching(false);
                     setCardsForRender(found);
                 } else {
-                    const filtered = handleMovieFiltering(found, isFilterOn, false);
+                    const filtered = handleMovieFiltering(found, isFilterOn, true);
                     setIsSearching(false);
                     setCardsForRender(filtered);
                     if (!filtered.length) {
@@ -46,7 +47,7 @@ function SavedMovie({ isLoggedIn, onHamburgerClick, savedCards, onCardDelete, is
         (isChecked) => {
             setFilter(isChecked);
             setCardsNotFound(false);
-            const filtered = handleMovieFiltering(filteredCards, isChecked, false);
+            const filtered = handleMovieFiltering(filteredCards, isChecked, true);
             setCardsForRender(filtered);
             if (!filtered.length) {
                 setCardsNotFound(true);

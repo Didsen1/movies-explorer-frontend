@@ -4,12 +4,19 @@ import useFormValidator from "../../hooks/useFormValidator.js";
 
 import "./Profile.css"
 import Header from "../Header/Header.js";
+import { USER_NAME_REG_EXP } from '../../utils/constants.js'
 
-function Profile({ isLoggedIn, onHamburgerClick, onUpdateUser, onLogout, }) {
+
+function Profile({ isLoggedIn, onHamburgerClick, onUpdateUser, onLogout, resetServerError, serverError, }) {
     const [isCurrentUser, setUserDifference] = useState(true);
     const [isEditing, setEditing] = useState(false);
     const currentUser = useContext(CurrentUserContext);
     const { values, errors, isFormValid, handleChange, resetForm } = useFormValidator()
+
+    const handleEditClick = () => {
+        setEditing(!isEditing);
+        resetServerError();
+    }
 
     useEffect(() => {
         currentUser.name !== values.name || currentUser.email !== values.email
@@ -21,13 +28,13 @@ function Profile({ isLoggedIn, onHamburgerClick, onUpdateUser, onLogout, }) {
         resetForm(false, currentUser);
     }, [resetForm, currentUser]);
 
-    const handleEditClick = () => {
-        setEditing(!isEditing);
-    }
-
     function handleSubmit(e) {
         e.preventDefault();
         onUpdateUser({ email: values.email, name: values.name });
+    }
+
+    function handleButtonDisable() {
+        return isFormValid && !isCurrentUser ? false : true;
     }
 
     return (
@@ -37,11 +44,12 @@ function Profile({ isLoggedIn, onHamburgerClick, onUpdateUser, onLogout, }) {
                 <section className="profile__wrapper">
                     <h1 className="profile__title">Привет, {currentUser.name}!</h1>
                     <form className="profile__form"
-                        onSubmit={handleSubmit}>
+                        onSubmit={handleSubmit}
+                        noValidate>
                         <label className="profile__label">
                             <div className='profile__input-wrapper'>
                                 Имя
-                                <input type="text" className="profile__input" value={values.name || ""} name='name' required disabled={!isEditing} minLength="2" maxLength="30" onChange={handleChange} autoComplete="off"
+                                <input type="text" className="profile__input" pattern={USER_NAME_REG_EXP} value={values.name || ""} name='name' required disabled={!isEditing} minLength="2" maxLength="30" onChange={handleChange} autoComplete="off"
                                     placeholder="Введите имя"></input>
                             </div>
                             <span className='profile__input-error'>{errors.name}</span>
@@ -54,13 +62,17 @@ function Profile({ isLoggedIn, onHamburgerClick, onUpdateUser, onLogout, }) {
                             <span className='profile__input-error'>{errors.email}</span>
                         </label>
 
+
                         <div className={`profile__button-wrapper ${!isEditing ? "profile__button-wrapper_active" : ""}`}>
+                        <p className='profile__error-shower'>{serverError}</p>
                             <button className="profile__button hover-button" type="button"
                                 onClick={handleEditClick}>Редактировать</button>
                             <button type="button" className="profile__button hover-button profile__button_red" onClick={onLogout}>Выйти из аккаунта</button>
                         </div>
                         <div className={`profile__button-wrapper ${isEditing ? "profile__button-wrapper_active" : ""}`}>
-                            <button type="submit" className={`profile__button profile__button_submit hover-button ${!isFormValid ? 'profile__button_submit_disabled' : ' '}`} disabled={!isFormValid}
+                            
+                        <p className='profile__error-shower'>{serverError}</p>
+                            <button type="submit" className={`profile__button profile__button_submit hover-button ${handleButtonDisable() ? "profile__button_submit_disabled" : ' '}`} disabled={handleButtonDisable()}
                                 onClick={handleEditClick}>Сохранить</button>
                         </div>
                     </form>
@@ -72,6 +84,3 @@ function Profile({ isLoggedIn, onHamburgerClick, onUpdateUser, onLogout, }) {
 }
 
 export default Profile;
-
-
-

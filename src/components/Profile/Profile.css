@@ -108,11 +108,28 @@
 .profile__button_submit_disabled {
     color: #C2C2C2;
     background: var(--white);
+    pointer-events: none;
 }
 
 .profile__button_red {
     margin-top: 14px;
     color: var(--red);
+}
+
+.profile__error-shower {
+    margin: 0;
+    width: 100%;
+    max-width: 410px;
+    text-overflow: ellipsis;
+    font-size: 10px;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--red);
+    height: 16px;
+    text-align: center;
+    display: block;
+    justify-self: end;
+    margin-bottom: 5px;
 }
 
 @media screen and (max-width: 990px) {

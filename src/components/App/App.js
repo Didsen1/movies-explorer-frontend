@@ -25,7 +25,6 @@ function App() {
   const [isLoading, setLoading] = useState(false);
   const [isAppLoaded, setIsAppLoaded] = useState(false);
   const [serverError, setServerError] = useState('');
-  const [isSuccess, setIsSuccess] = useState(true);
 
   const MOVIES_API_URL = "https://api.nomoreparties.co";
 
@@ -34,7 +33,6 @@ function App() {
 
   const [cards, setCards] = useState([]);
   const [savedCards, setSavedCards] = useState([]);
-  const [isLiked, setLike] = useState(false);
 
   const navigate = useNavigate();
 
@@ -80,15 +78,20 @@ function App() {
     try {
       const userData = await mainApi.updateUserInfo({ email, name });
       if (userData) {
-        console.log(userData)
         setCurrentUser(userData.user);
+        setServerError('Данные обновлены.')
       }
     } catch (err) {
       console.error(err);
+      setServerError(err)
     } finally {
       setLoading(false);
     }
   }
+
+  const resetServerError = () => {
+    setServerError('');
+  };
 
   const checkToken = useCallback(() => {
     const jwt = localStorage.getItem('jwt')
@@ -238,6 +241,8 @@ function App() {
             <Route path='/profile' element={
               <ProtectedRoute loggedIn={isLoggedIn}>
                 <Profile
+                  resetServerError={resetServerError}
+                  serverError={serverError}
                   isLoggedIn={isLoggedIn}
                   onLogout={handleUserLogout}
                   onUpdateUser={handleUpdateUserData}

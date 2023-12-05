@@ -6,11 +6,7 @@ function NotFound() {
     const navigate = useNavigate();
 
     function handleBtnBackClick() {
-        if (window.history.state && window.history.state.idx > 0) {
-            navigate(-1);
-        } else {
-            navigate("/", { replace: true });
-        }
+        navigate(-1);
     }
 
     return (

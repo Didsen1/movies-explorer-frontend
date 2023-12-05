@@ -65,7 +65,7 @@
     background-image: url(../../images/delete-button.svg);
 }
 
-.movie-card:hover.movie-card__function-button_delete {
+.movie-card:hover .movie-card__function-button_delete {
     opacity: 1;
 }
 
@@ -121,6 +121,10 @@
     .movie-card__duration {
         margin-top: 8px;
         font-size: 10px;
+    }
+
+    .movie-card__function-button_delete {
+        opacity: 1;
     }
 
 }
