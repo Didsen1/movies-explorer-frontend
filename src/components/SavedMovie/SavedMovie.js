@@ -95,6 +95,12 @@ function SavedMovie({ isLoggedIn, onHamburgerClick, savedCards, onCardDelete, is
         }
     }, [savedCards]);
 
+    useEffect(() => {
+        localStorage.removeItem("savedMoviesSearchQuery")
+        localStorage.removeItem("isSavedMoviesFilterOn")
+        setFilter(false)
+    }, [])
+
 
     return (
         <>
