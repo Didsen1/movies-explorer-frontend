@@ -7,13 +7,13 @@ import logo from "../../images/logo.svg"
 import AccountLink from "../AccountLink/AccountLink"
 import Navigation from '../Navigation/Navigation';
 
-function Header({ isLoading, onHamburgerClick }) {
+function Header({ isLoggedIn, onHamburgerClick }) {
     let location = useLocation();
 
     return (
         <header className={`header ${location.pathname === "/" ? "header_promo" : " "}`} >
             {
-                isLoading ? (
+                isLoggedIn ? (
                     <>
                         <a href="/" rel="noreferrer"><img src={logo} className="header__img hover-link" alt='Логотип' /></a>
                         <Navigation />

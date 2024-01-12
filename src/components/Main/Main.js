@@ -7,11 +7,11 @@ import Aboutme from "../AboutMe/AboutMe.js"
 import Header from "../Header/Header.js";
 import Footer from "../Footer/Footer";
 
-function Main({ isLoading, onHamburgerClick }) {
+function Main({ isLoggedIn, onHamburgerClick }) {
 
     return (
         <>
-            <Header isLoading={isLoading} onHamburgerClick={onHamburgerClick} />
+            <Header isLoggedIn={isLoggedIn} onHamburgerClick={onHamburgerClick} />
             <main className="main">
                 <Promo />
                 <AboutProject />
